@@ -1,2 +1,3 @@
-storage/*
 caddy_certs
+storage/*
+!storage/.gitkeep

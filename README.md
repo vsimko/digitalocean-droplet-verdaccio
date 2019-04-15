@@ -10,25 +10,17 @@ Most of our code is developed inside a monorepo.
 Some CLI packages (e.g. `promonode-cli`) need to be installed on multiple machines without checking
 out the whole monorepo.
 
-Contains:
-- **conf:** Configuration file and a small script to create users in `httpasswd`
-
-## Prepare
+## Prepare and run
 
 ```sh
-# clone the repository into /etc
-cd /etc
+# clone the repository somewhere on the server e.g. /root
 git clone https://github.com/vsimko/promonode-verdaccio-droplet.git
 cd promonode-verdaccio-droplet
-```
 
-```sh
 # Create at least one user
 conf/add-repo-user.sh
-```
 
-## How to start the NPM registry
-```sh
+# Start the container
 $ docker-compose up -d # now visit https://npm.promonode.com
 # the "restart" policy ensures that the containers start automaticlly
 # see the docker-compose.yml file

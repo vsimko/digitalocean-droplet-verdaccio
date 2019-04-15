@@ -5,10 +5,5 @@ npm.promonode.com {
   }
 
   gzip
-
-  tls {
-    # verify ssl certificate using dns from DigitalOcean really save me from a lot of pain.
-    dns digitalocean
-  }
 }
 

@@ -7,8 +7,8 @@ services:
     ports:
       - "4873:4873"
     volumes:
-      - verdaccio-storage:/verdaccio/storage"
-      - verdaccio-conf:/verdaccio/conf"
+      - ./storage:/verdaccio/storage
+      - ./conf:/verdaccio/conf
 
   caddy:
     image: abiosoft/caddy:0.11.0
@@ -20,9 +20,9 @@ services:
       - "443:443"
     volumes:
       - ./Caddyfile:/etc/Caddyfile
-      - caddy_certs:/root/.caddy
+      - ./caddy_certs:/root/.caddy
 
 volumes:
+  conf:
+  storage:
   caddy_certs:
-  verdaccio-conf:
-  verdaccio-storage:

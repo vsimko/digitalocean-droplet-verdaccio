@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  verdaccio:
+    image: verdaccio/verdaccio:4.x-next
+    container_name: verdaccio
+    ports:
+      - "4873:4873"
+    volumes:
+      - verdaccio-storage:/verdaccio/storage"
+      - verdaccio-conf:/verdaccio/conf"
+
+  caddy:
+    image: abiosoft/caddy:0.11.0
+    depends_on:
+      - "verdaccio"
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/Caddyfile
+      - caddy_certs:/root/.caddy
+
+volumes:
+  caddy_certs:
+  verdaccio-storage:
+  verdaccio-conf:

@@ -1,0 +1,6 @@
+npm.promonode.com {
+    proxy / verdaccio:4873 {
+        websocket
+    }
+}
+

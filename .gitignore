@@ -1,3 +1,4 @@
+conf/htpasswd
 caddy_certs
 storage/*
 !storage/.gitkeep

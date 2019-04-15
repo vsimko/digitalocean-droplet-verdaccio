@@ -1,6 +1,14 @@
 npm.promonode.com {
-    proxy / verdaccio:4873 {
-        websocket
-    }
+  proxy / verdaccio:4873 {
+    websocket
+    transparent
+  }
+
+  gzip
+
+  tls {
+    # verify ssl certificate using dns from DigitalOcean really save me from a lot of pain.
+    dns digitalocean
+  }
 }
 

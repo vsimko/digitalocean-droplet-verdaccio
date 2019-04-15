@@ -44,15 +44,9 @@ uplinks:
     url: https://registry.npmjs.org/
 
 packages:
-  '@promonode/*':
-      access: $all
-      publish: $all
-
-  '@*/*':
-    # scoped packages
-    access: $all
-    publish: $all
-    proxy: npmjs
+  'promonode-*':
+    access: $authenticated
+    publish: $authenticated
 
   '**':
     # allow all users (including non-authenticated users) to read and

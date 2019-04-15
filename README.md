@@ -2,7 +2,6 @@
 
 The NPM registry is based on Verdaccio running in a docker container.
 It is intended for the "Docker" droplet from DigitalOcean Marketplace.
-The git repo should be cloned to e.g. `/etc/promonode`
 
 ## Why
 
@@ -15,6 +14,14 @@ Contains:
 - **conf:** Configuration file and a small script to create users in `httpasswd`
 
 ## Prepare
+
+```sh
+# clone the repository into /etc
+cd /etc
+git clone https://github.com/vsimko/promonode-verdaccio-droplet.git
+cd promonode-verdaccio-droplet
+```
+
 ```sh
 # Create at least one user
 conf/add-repo-user.sh

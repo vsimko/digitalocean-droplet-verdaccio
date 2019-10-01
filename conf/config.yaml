@@ -13,7 +13,7 @@
 web:
   # WebUI is enabled as default, if you want disable it, just uncomment this line
   #enable: false
-  title: Promonode
+  title: My Verdaccio
   # comment out to disable gravatar support
   # gravatar: false
   # by default packages are ordercer ascendant (asc|desc)
@@ -44,7 +44,7 @@ uplinks:
     url: https://registry.npmjs.org/
 
 packages:
-  'promonode-*':
+  'my-*':
     access: $authenticated
     publish: $authenticated
 
